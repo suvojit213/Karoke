@@ -1,0 +1,24 @@
+name: Create Flutter Project
+
+on:
+  workflow_dispatch: # Allows manual triggering
+
+jobs:
+  create_project:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Flutter
+      uses: subosito/flutter-action@v2
+      with:
+        flutter-version: '3.x' # Use a specific Flutter version or 'stable'
+
+    - name: Create Flutter Project
+      run: flutter create my_flutter_app
+      working-directory: ./ # Create the project in the root of the repository
+
+    - name: List created project contents
+      run: ls -l my_flutter_app/

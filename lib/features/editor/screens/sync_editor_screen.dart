@@ -42,7 +42,7 @@ class _SyncEditorScreenState extends State<SyncEditorScreen> {
 
     _audioPlayer.playerStateStream.listen((playerState) {
       if (playerState.playing) {
-        _waveformController.startPlayer(finishMode: FinishMode.pause);
+        _waveformController.startPlayer();
       } else if (playerState.processingState == ProcessingState.completed) {
         _waveformController.stopPlayer();
         setState(() {

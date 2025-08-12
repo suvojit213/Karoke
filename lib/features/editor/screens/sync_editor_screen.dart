@@ -184,7 +184,7 @@ class _SyncEditorScreenState extends State<SyncEditorScreen> {
                 borderRadius: BorderRadius.circular(12.0),
                 color: const Color(0xFF1E1E1E),
               ),
-              waveColor: Colors.blueAccent,
+              playerWaveStyle: const PlayerWaveStyle(fixedWaveColor: Colors.blueAccent),
               padding: const EdgeInsets.all(10.0),
               margin: const EdgeInsets.symmetric(horizontal: 15.0),
             ),

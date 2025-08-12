@@ -4,8 +4,7 @@ import 'package:my_flutter_app/data/models/lyric_line_model.dart';
 class LrcParser {
   static List<LyricLine> parseLrc(String lrcContent) {
     final List<LyricLine> lyrics = [];
-    final RegExp regex = RegExp(r'^[\\d+):(\\d+\\.\\d+)](.*)
-);
+    final RegExp regex = RegExp(r'^\[(\d+):(\d+\.\d+)\](.*)');
     int index = 0;
 
     for (String line in lrcContent.split('\n')) {

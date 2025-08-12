@@ -53,7 +53,7 @@ class _ReviewEditorScreenState extends State<ReviewEditorScreen> {
 
     _audioPlayer.playerStateStream.listen((playerState) {
       if (playerState.playing) {
-        _waveformController.startPlayer(finishMode: FinishMode.pause);
+        _waveformController.startPlayer();
       } else if (playerState.processingState == ProcessingState.completed) {
         _waveformController.stopPlayer();
         setState(() {
@@ -247,7 +247,7 @@ class _ReviewEditorScreenState extends State<ReviewEditorScreen> {
                 const SizedBox(height: 20),
                 AudioWaveforms(
                   size: Size(MediaQuery.of(context).size.width, 100.0),
-                  playerController: _waveformController,
+                  controller: _waveformController,
                   waveformType: WaveformType.long,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(12.0),

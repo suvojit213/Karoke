@@ -38,7 +38,7 @@ class AssConverter {
       final String endTime = _formatMsToAssTime(endMs);
 
       // Dialogue: 0,Start,End,Style,,0,0,0,,Text
-      assContent.writeln('Dialogue: 0,$startTime,$endTime,Default,,0,0,0,,'${lyric.text}');
+      assContent.writeln('Dialogue: 0,$startTime,$endTime,Default,,0,0,0,,${lyric.text}');
     }
 
     return assContent.toString();

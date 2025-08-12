@@ -178,7 +178,7 @@ class _SyncEditorScreenState extends State<SyncEditorScreen> {
             const SizedBox(height: 20),
             AudioWaveforms(
               size: Size(MediaQuery.of(context).size.width, 100.0),
-              playerController: _waveformController,
+              controller: _waveformController,
               waveformType: WaveformType.long,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12.0),

@@ -16,6 +16,24 @@ class Project {
     required this.modifiedAt,
   });
 
+  Project copyWith({
+    String? id,
+    String? title,
+    String? audioPath,
+    String? lyricsPath,
+    DateTime? createdAt,
+    DateTime? modifiedAt,
+  }) {
+    return Project(
+      id: id ?? this.id,
+      title: title ?? this.title,
+      audioPath: audioPath ?? this.audioPath,
+      lyricsPath: lyricsPath ?? this.lyricsPath,
+      createdAt: createdAt ?? this.createdAt,
+      modifiedAt: modifiedAt ?? this.modifiedAt,
+    );
+  }
+
   Map<String, dynamic> toJson() {
     return {
       'id': id,

@@ -20,5 +20,18 @@ jobs:
       run: flutter create my_flutter_app
       working-directory: ./ # Create the project in the root of the repository
 
+    - name: Configure Git
+      run: |
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        git config user.name "github-actions[bot]"
+
+    - name: Commit and Push new Flutter project
+      run: |
+        git add my_flutter_app
+        git commit -m "feat: Add new Flutter project created by workflow" || echo "No changes to commit"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Use the default GITHUB_TOKEN for authentication
+
     - name: List created project contents
       run: ls -l my_flutter_app/

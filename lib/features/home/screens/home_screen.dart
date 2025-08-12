@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:my_flutter_app/data/repositories/project_provider.dart';
 import 'package:my_flutter_app/features/project/screens/project_creation_screen.dart';
+import 'package:my_flutter_app/features/editor/screens/sync_editor_screen.dart';
 
 class HomeScreen extends ConsumerWidget {
   const HomeScreen({super.key});

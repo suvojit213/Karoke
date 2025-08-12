@@ -245,7 +245,7 @@ class _ReviewEditorScreenState extends State<ReviewEditorScreen> {
               children: [
                 Text('Audio: ${widget.project.audioPath.split('/').last}'),
                 const SizedBox(height: 20),
-                AudioWaveforms(
+                AudioFileWaveforms(
                   size: Size(MediaQuery.of(context).size.width, 100.0),
                   playerController: _waveformController,
                   waveformType: WaveformType.long,
